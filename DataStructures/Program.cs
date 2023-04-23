@@ -1,7 +1,10 @@
-﻿Console.WriteLine("Enter Array Length");
+﻿using DataStructures;
+using System;
+
+Console.WriteLine("Enter Array Length");
 string value  = Console.ReadLine();
 int arrayLength = Convert.ToInt32(value);
-int[] arrayName01= new int[arrayLength];
+int[] arrayName= new int[arrayLength];
 
 int counter = 0;
 
@@ -15,35 +18,15 @@ int counter = 0;
 
 int offSet = new Random().Next(1000);
 
-for (; counter < arrayName01.Length; counter++)
+for (; counter < arrayName.Length; counter++)
 {
-    arrayName01[counter] = offSet + counter;
+    arrayName[counter] = new Random().Next(10000);
     //Console.WriteLine(arrayName01[counter]);
 }
 
+Algorithms.BubbleSort(arrayName);
 
-void binarySearch(int numberToFind)
-{
-    int min = 0;
-    int max = arrayLength - 1;
-    int midPoint = (arrayLength - 1) / 2;
-
-    while(arrayName01[midPoint] != numberToFind)
-    {
-        if(arrayName01[midPoint] < numberToFind)
-        {
-            min = midPoint + 1;
-        }
-        if(arrayName01[midPoint] > numberToFind)
-        {
-            max = midPoint - 1;
-        }
-        midPoint = (max + min) / 2;
-    }
-    Console.WriteLine("Number found at location: " + midPoint);
-}
-
-binarySearch(new Random().Next(offSet, arrayLength + offSet));
+// Algorithms.BinarySearch(new Random().Next(offSet, arrayLength + offSet), arrayName);
 
 Console.WriteLine("Press any key to continue.");
 Console.ReadKey();
