@@ -10,7 +10,7 @@ namespace DataStructures
     {
         #region Binary Search
         /// <summary>
-        /// Does a binary search to find the argument in the provided array
+        /// Does a binary search to find the argument in the provided array; BigO = log(n)
         /// </summary>
         /// <param name="numberToFind">the number to find</param>
         /// <param name="array">the array to search</param>
@@ -38,7 +38,7 @@ namespace DataStructures
 
         #region Bubble Sort
         /// <summary>
-        /// performs a bubble sort to sort the array from lowest to highest
+        /// performs a bubble sort to sort the array from lowest to highest; BigO = n^2
         /// </summary>
         /// <param name="array">the array to sort</param>
         public static void BubbleSort(int[] array)
