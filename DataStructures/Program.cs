@@ -18,6 +18,8 @@ using System;
 //Console.ReadKey();
 
 
+
+
 //int offSet = new Random().Next(1000);
 
 //for (; counter < arrayName.Length; counter++)
@@ -32,7 +34,10 @@ using System;
 
 
 
-LinkedList list = new LinkedList();
+
+var x = new List<int>();
+
+MyLinkedList<int> list = new MyLinkedList<int>();
 
 list.Add(7);
 list.Add(69);  
